@@ -26,3 +26,12 @@ var sentence = words.filter(function(word) {
     return word.length >= 2;
 });
     console.log("Sentence: ", sentence);
+
+   var newArray = Array.isArray('input'); // isArray is a function that takes one parameter
+   var newMethod = Math.random(); //outputs a random value between 0 and 1.
+
+   
+   // writing function with Object and its key
+   var getKey = function(object, key) {
+       return object[key];
+   }
