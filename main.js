@@ -19,3 +19,10 @@ const updateDOM = function(message) {
     newMsg.innerHTML += message;
     return message;
 }
+
+
+var words = ["A", "list", "of", "words", "go", "here"];
+var sentence = words.filter(function(word) {
+    return word.length >= 2;
+});
+    console.log("Sentence: ", sentence);
