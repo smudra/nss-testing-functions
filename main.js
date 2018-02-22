@@ -166,13 +166,34 @@ timer();
 
 // CLOSURE: retains state and scope after it executes
 
-$(document).ready(function() {
-    var a = 1;
+// $(document).ready(function() {
+//     var a = 1;
 
-    $('button').on('click', function() {
-        a++;
-        alert(a);
-    });
-    // when the js is done using the function it is called memory leak
-    $('button').off('click');
-});
+//     $('button').on('click', function() {
+//         a++;
+//         alert(a);
+//     });
+//     // when the js is done using the function it is called memory leak
+//     $('button').off('click');
+// });
+
+/* ES6 */
+const isMomHappy = true;
+
+// Promise
+const willIGetNewPhone = new Promise(
+    (resolve, reject) => {
+        if (isMomHappy) {
+            const phone = {
+                brand: "Samsung",
+                color: "black"
+            };
+            resolve(phone);
+            console.log("What is resolve phone? ", phone);
+        } else {
+            const reason = new Error("Mom not happy");
+            reject(reason);
+            console.log("What is not Happy?", reason);
+        }
+    }
+)
